@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color:#333;
+    background-color: #130933;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+
+}
+
+.main_card {
+
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*text-align: center;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.play_card_text{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.play_card_btn{
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    background-color:#130933;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin:0 auto;
+    display: block;
+}
+
+.play_card_btn:hover{
+    border: 2px solid #E9EB27;
+    color: #E9EB27;
+}
+
+.game_card{
+    transition-property: opacity;
+    transition-duration: 3s;
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*width: 600px;*/
+    /*height: 600px;*/
+    /* background-color: red; */
+    /* margin: auto; */
+}
+
+.tic_tac_toc_area{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+
+    bottom: 0;
+}
+
+canvas{
+
+    border: 1px solid black;
+
+    background-color: #421AB9  ;
+}
+
+/*table{*/
+/*    width: 500px;*/
+/*    height: 500px;*/
+/*}*/
+
+table,td {
+    /*border: 2px solid #ffffff;*/
+    border-collapse: collapse;
+}
+
+.border{
+    border: 2px solid #ffffff;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    background-color: #421AB9;
+}
+
+tr{
+    height:150px ;
+
+}
+
+td{
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    /*background-color: #E9EB27;*/
+}
+
+
+svg{
+    /*background: #ffece3;*/
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin: 0 auto;
+    transform: translate(-50%,-50%);
+    /*padding: 10px;*/
+    /*margin:0 auto;*/
+    /*display: block;*/
+}
+
+circle{
+    fill: transparent;
+    stroke: orange;
+    stroke-width: 10px;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 0;
+    animation: clock-animation 0.3s linear;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+@keyframes clock-animation{
+    0%{
+        stroke-dashoffset: 314;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+.first_path{
+    opacity: 0;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    /*stroke-dashoffset: 0;*/
+    animation: first-animation 0.2s linear forwards;
+    /*transform: rotate(-180deg);*/
+    -webkit-animation-delay:0.2s;
+}
+
+.second_path{
+    fill: none;
+    stroke-dasharray: 100;
+    animation:  second-animation 0.2s linear;
+
+}
+
+@keyframes first-animation{
+    0%{
+        stroke-dashoffset: 100;
+        /*opacity: 0;*/
+    }
+    100%{
+
+        stroke-dashoffset:0;
+    }
+
+    from { opacity: 0; }
+    to { opacity: 1; }
+
+
+}
+
+@keyframes second-animation{
+    0%{
+        stroke-dashoffset: -100;
+    }
+}
+
+.stick_won{
+    fill: none;
+    stroke-dasharray: 400;
+    display: none;
+    /*transform: rotate(0deg);*/
+    animation:  stick-animation 0.3s linear;
+}
+
+.stick_won_45{
+    fill: none;
+    stroke-dasharray: 600;
+    display: none;
+    /*transform: rotate(0deg);*/
+    animation:  stick_45-animation 0.3s linear;
+}
+
+
+@keyframes stick-animation{
+    0%{
+        stroke-dashoffset: 400;
+        /*opacity: 0;*/
+    }
+    100%{
+
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes stick_45-animation{
+    0%{
+        stroke-dashoffset: 600;
+        /*opacity: 0;*/
+    }
+    100%{
+
+        stroke-dashoffset:0;
+    }
+}

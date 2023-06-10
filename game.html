@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://wagt.space/static/css/game.css">
+    <script src="https://wagt.space/static/js/game.js"></script>
+<!--    <script src="https://wagt.space/static/css/game.css"></script>-->
+</head>
+<body>
+<div class="container">
+
+    <div class="main_card js__main_card">
+        <span class="play_card_text">Play with friend</span>
+        <button class="play_card_btn js__play_card_btn">Start</button>
+
+    </div>
+
+    <div class="game_card js__game_card">
+
+<!--        <canvas class="tic_tac_toc_area" id="tic_tac_toe_area" width="500" height="500"></canvas>-->
+        <span style="color: #ffffff">You won</span>
+
+        <table>
+            <tr>
+
+                <td class="border" id="0" style="border-width: 0 2px 2px 0;position: relative" ></td>
+                <td style="position: relative;" id="1"></td>
+                <td class="border" id="2" style="border-width: 0 0 2px 2px;"></td>
+            </tr>
+            <tr>
+                <td id="3"></td>
+                <td class="border" id="4"></td>
+                <td id="5"></td>
+            </tr>
+            <tr>
+                <td class="border" id="6" style="border-width: 2px 2px 0 0;"></td>
+                <td id="7"></td>
+                <td id="8" class="border" style="border-width: 2px 0 0 2px;"></td>
+            </tr>
+        </table>
+
+
+        <svg class="stick_won js_stick_won" xmlns="http://www.w3.org/2000/svg" width="411" height="11" viewBox="0 0 411 11" fill="none">
+            <path d="M5.96408 5.5H405.964" stroke="black" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+
+        <svg class="stick_won_45 js__stick_won_45" xmlns="http://www.w3.org/2000/svg" width="435" height="435" viewBox="0 0 435 435" fill="none">
+            <path d="M5 429.264L429.264 4.99996" stroke="black" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+
+
+    </div>
+</div>
+</body>
+</html>
