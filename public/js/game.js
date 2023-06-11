@@ -27,7 +27,6 @@ let x_mark = `<svg class="circle_and_x" xmlns="http://www.w3.org/2000/svg" width
                         <path class="second_path" d="M5.53372 76.235L76.2444 5.52431" stroke="#FA2929" stroke-width="10" stroke-linecap="round"/>
                     </svg>`;
 
-
 function start(){
     let start_btn = document.querySelector(".js__play_card_btn");
     start_btn.addEventListener('click',async(e)=>{
@@ -36,16 +35,12 @@ function start(){
 }
 
 function chooseBox(){
-    let score_x = document.querySelector('.js__score_x');
-    console.log(+score_x.innerText+1);
-
     document.addEventListener('click', (e)=>{
         const target = e.target;
         let td_box = target.closest('td');
         let row = td_box.parentElement;
 
         if (!target.closest('td')) return;
-
         if(tic_tac_arr[row.rowIndex][td_box.cellIndex] ==0){
             if(whose_turn === 1){
                 td_box.innerHTML =x_mark
@@ -91,8 +86,6 @@ function checkScore(){
     }else if(tic_tac_arr[0][2] != 0 && tic_tac_arr[0][2] === tic_tac_arr[1][1] && tic_tac_arr[0][2] === tic_tac_arr[2][0]){
         one_two = tic_tac_arr[0][2];
         setTimeout(styleStick,700, stick_won_45,50,51.5,0);
-    }else{
-        console.log("Continue")
     }
 }
 
@@ -101,12 +94,10 @@ async function styleStick(stick_won,left,top,rotate){
     stick_won.style.top=`${top}%`;
     stick_won.style.transform = 'translate(-50%,-50%) rotate(' + rotate + 'deg)';
     stick_won.style.display = 'block';
-
     setTimeout(showResult,1000)
 }
 
 function showResult(){
-
     let result_card = document.querySelector('.js_result_card');
     let score_x = document.querySelector('.js__score_x');
     let score_circle = document.querySelector('.js__score_circle');
@@ -116,8 +107,6 @@ function showResult(){
 }
 
 function restart(){
-
-
     document.querySelector('.js__restart_btn').addEventListener('click', async(e)=>{
         await clear();
         let result_card = document.querySelector('.js_result_card');
@@ -130,19 +119,14 @@ function restart(){
 
 function clear(){
     let td = document.querySelectorAll('td');
-
     td.forEach((item)=>{
         item.innerHTML = "";
     })
-
     for ( let i=0; i<3; i++ ){
         for ( let j=0; j<3; j++ ){
             tic_tac_arr[i][j] = 0;
         }
     }
-
-
-
 }
 
 function changeCard(){

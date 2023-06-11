@@ -18,13 +18,9 @@ body{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center; */
-
 }
 
 .main_card {
-
     text-align: center;
     margin: 0;
     position: absolute;
@@ -32,9 +28,6 @@ body{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /*text-align: center;*/
-    /*display: flex;*/
-    /*justify-content: center;*/
 }
 
 .column {
@@ -82,34 +75,21 @@ body{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /*width: 600px;*/
-    /*height: 600px;*/
-    /* background-color: red; */
-    /* margin: auto; */
 }
 
 .tic_tac_toc_area{
     width: 500px;
     height: 500px;
     position: absolute;
-
     bottom: 0;
 }
 
 canvas{
-
     border: 1px solid black;
-
     background-color: #421AB9  ;
 }
 
-/*table{*/
-/*    width: 500px;*/
-/*    height: 500px;*/
-/*}*/
-
 table,td {
-    /*border: 2px solid #ffffff;*/
     border-collapse: collapse;
 }
 
@@ -118,23 +98,19 @@ table,td {
     border-collapse: collapse;
 }
 
-
 th, td {
     background-color: #421AB9;
 }
 
 tr{
     height:150px ;
-
 }
 
 td{
     width: 150px;
     cursor: pointer;
     position: relative;
-    /*background-color: #E9EB27;*/
 }
-
 
 .circle_and_x{
     position: absolute;
@@ -174,9 +150,7 @@ td{
     opacity: 0;
     stroke-dasharray: 100;
     stroke-dashoffset: 0;
-    /*stroke-dashoffset: 0;*/
     animation: first-animation 0.2s linear forwards;
-    /*transform: rotate(-180deg);*/
     -webkit-animation-delay:0.2s;
 }
 
@@ -184,23 +158,18 @@ td{
     fill: none;
     stroke-dasharray: 100;
     animation:  second-animation 0.2s linear;
-
 }
 
 @keyframes first-animation{
     0%{
         stroke-dashoffset: 100;
-        /*opacity: 0;*/
     }
     100%{
-
         stroke-dashoffset:0;
     }
 
     from { opacity: 0; }
     to { opacity: 1; }
-
-
 }
 
 @keyframes second-animation{
@@ -213,7 +182,6 @@ td{
     fill: none;
     stroke-dasharray: 420;
     display: none;
-    /*transform: rotate(0deg);*/
     animation:  stick-animation 0.3s linear;
 }
 
@@ -221,18 +189,14 @@ td{
     fill: none;
     stroke-dasharray: 600;
     display: none;
-    /*transform: rotate(0deg);*/
     animation:  stick_45-animation 0.3s linear;
 }
-
 
 @keyframes stick-animation{
     0%{
         stroke-dashoffset: 420;
-        /*opacity: 0;*/
     }
     100%{
-
         stroke-dashoffset:0;
     }
 }
@@ -240,10 +204,8 @@ td{
 @keyframes stick_45-animation{
     0%{
         stroke-dashoffset: 600;
-        /*opacity: 0;*/
     }
     100%{
-
         stroke-dashoffset:0;
     }
 }
@@ -263,10 +225,6 @@ td{
 .restart_btn:hover{
     border: 2px solid #E9EB27;
     color: #E9EB27;
-}
-
-.restart_btn_card{
-
 }
 
 .result_card{
