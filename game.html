@@ -18,7 +18,32 @@
     <div class="game_card js__game_card">
 
 <!--        <canvas class="tic_tac_toc_area" id="tic_tac_toe_area" width="500" height="500"></canvas>-->
-        <span style="color: #ffffff">You won</span>
+        <div class="score_card">
+
+
+
+
+            <div class="row">
+                <div class="column" style="margin: 0 auto;padding-top: 10px">
+                    <span style="color: #ffffff;font-size: 16px;">Score</span>
+                </div>
+                <div class="column">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <path d="M2.73026 3L32.5337 32.7792" stroke="#FA2929" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M2.53372 33L32.3372 3.22081" stroke="#FA2929" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <span style="color: #ffffff; font-size: 24px;padding-left: 30px">1</span>
+                </div>
+                <div class="column">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 36 36" fill="none">
+                        <circle cx="18" cy="18" r="15.5" stroke="#FFA500" stroke-width="5"/>
+                    </svg>
+                    <span style="color: #ffffff; font-size: 24px;padding-left: 30px">0</span>
+                </div>
+            </div>
+
+        </div>
+
 
         <table>
             <tr>
@@ -40,16 +65,33 @@
         </table>
 
 
-        <svg class="stick_won js_stick_won" xmlns="http://www.w3.org/2000/svg" width="411" height="11" viewBox="0 0 411 11" fill="none">
-            <path d="M5.96408 5.5H405.964" stroke="black" stroke-width="10" stroke-linecap="round"/>
+<!--        <svg class="stick_won js_stick_won" xmlns="http://www.w3.org/2000/svg" width="411" height="11" viewBox="0 0 411 11" fill="none">-->
+<!--            <path d="M5.96408 5.5H405.964" stroke="black" stroke-width="10" stroke-linecap="round"/>-->
+<!--        </svg>-->
+        <svg class="stick_won circle_and_x js_stick_won" xmlns="http://www.w3.org/2000/svg" width="431" height="11" viewBox="0 0 431 11" fill="none">
+            <path d="M5.96408 5.5H425.964" stroke="black" stroke-width="10" stroke-linecap="round"/>
         </svg>
 
-        <svg class="stick_won_45 js__stick_won_45" xmlns="http://www.w3.org/2000/svg" width="435" height="435" viewBox="0 0 435 435" fill="none">
+        <svg class="stick_won_45 circle_and_x js__stick_won_45" xmlns="http://www.w3.org/2000/svg" width="435" height="435" viewBox="0 0 435 435" fill="none">
             <path d="M5 429.264L429.264 4.99996" stroke="black" stroke-width="10" stroke-linecap="round"/>
         </svg>
 
+        <button class="restart_btn js__restart_btn">Restart</button>
+
 
     </div>
+
+    <div class="result_card js_result_card">
+
+        <span class="result_card_text">WON</span>
+<!--        <svg class="circle_and_x" width="140" height="140">-->
+<!--            <circle class="circle" cx="50%" cy="50%" r="50" />-->
+<!--        </svg>-->
+    </div>
+
+
+
+
 </div>
 </body>
 </html>
