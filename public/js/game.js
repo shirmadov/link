@@ -18,6 +18,7 @@ let tic_tac_arr = [
     [0,0,0]
 ];
 
+
 let circle = `<svg class="circle_and_x" width="140" height="140">
                         <circle class="circle" cx="50%" cy="50%" r="50" />
                     </svg>`;
@@ -35,7 +36,8 @@ function start(){
 }
 
 function chooseBox(){
-
+    let score_x = document.querySelector('.js__score_x');
+    console.log(+score_x.innerText+1);
 
     document.addEventListener('click', (e)=>{
         const target = e.target;
@@ -104,16 +106,43 @@ async function styleStick(stick_won,left,top,rotate){
 }
 
 function showResult(){
-    let result_card = document.querySelector('.js_result_card');
 
+    let result_card = document.querySelector('.js_result_card');
+    let score_x = document.querySelector('.js__score_x');
+    let score_circle = document.querySelector('.js__score_circle');
     result_card.style.display = 'block';
     result_card.insertAdjacentHTML('beforeend',one_two === 1?x_mark:circle);
+    one_two === 1?score_x.innerText = +score_x.innerText+1:score_circle.innerText = +score_circle.innerText+1;
 }
 
 function restart(){
-    document.querySelector('.js__restart_btn').addEventListener('click', (e)=>{
-        console.log("Came");
+
+
+    document.querySelector('.js__restart_btn').addEventListener('click', async(e)=>{
+        await clear();
+        let result_card = document.querySelector('.js_result_card');
+        result_card.removeChild(result_card.lastElementChild);
+        result_card.style.display = 'none';
+        document.querySelector('.js__stick_won_45').style.display = 'none';
+        document.querySelector('.js_stick_won').style.display = 'none';
     })
+}
+
+function clear(){
+    let td = document.querySelectorAll('td');
+
+    td.forEach((item)=>{
+        item.innerHTML = "";
+    })
+
+    for ( let i=0; i<3; i++ ){
+        for ( let j=0; j<3; j++ ){
+            tic_tac_arr[i][j] = 0;
+        }
+    }
+
+
+
 }
 
 function changeCard(){
