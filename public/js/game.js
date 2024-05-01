@@ -137,7 +137,7 @@ function changeCard(){
 document.addEventListener("DOMContentLoaded",()=>{
     start()
     chooseBox();
-    restart()
+    restart();
 })
 
 
